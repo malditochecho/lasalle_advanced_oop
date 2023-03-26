@@ -1,0 +1,4 @@
+420AS2AS: Information Systems: IN8: 90: 4
+420PA3AS: Advanced Object Oriented Programming: IN4: 75: 3
+420AP1AS: Algorithms & Programming: IN3: 90: 5
+420LS3AS: Scripting Languages: IN4: 60: 3
