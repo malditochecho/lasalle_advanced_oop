@@ -60,7 +60,7 @@ public class CQueue {
         } else {
             head++;
         }
-        System.out.println("Dequeued " + element);
+        //System.out.println("Dequeued " + element);
         return element;
     }
 }

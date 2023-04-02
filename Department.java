@@ -8,9 +8,29 @@ public class Department {
     private HashMap<String, Course> courseMap;
     private ArrayList<Professor> listOfProfs;
 
-    // constructor
-    public Department() {
-        this.courseMap = new HashMap<String, Course>();
-        this.listOfProfs = new ArrayList<Professor>();
+    // getters
+    public HashMap<String, Course> getCourseMap() {
+        return courseMap;
     }
+    public ArrayList<Professor> getListOfProfs() {
+        return listOfProfs;
+    }
+
+    // setters
+    public void setCourseMap(HashMap<String, Course> courseMap) {
+        this.courseMap = courseMap;
+    }
+
+    // constructor
+    public Department(ArrayList<Professor> listOfProfs) {
+        this.listOfProfs = listOfProfs;
+        this.courseMap = new HashMap<>();
+    }
+    public Department(HashMap<String, Course> courseMap, ArrayList<Professor> listOfProfs) {
+        this.courseMap = courseMap;
+        this.listOfProfs = listOfProfs;
+    }
+
+    // methods
+
 }

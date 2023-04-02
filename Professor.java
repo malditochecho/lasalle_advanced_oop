@@ -14,8 +14,17 @@ public class Professor implements Comparable<Professor>
     private Set<String> setOfDisciplines;
     private ArrayList<Course> listOfAffectedCourses;
 
-    // getters and setters
+    // getters
     public short getId() { return id; }
+    public String getName() { return name; }
+    public ArrayList<Course> getListOfAffectedCourses() {
+        return listOfAffectedCourses;
+    }
+
+    // setters
+    public Set<String> getSetOfDisciplines() {
+        return setOfDisciplines;
+    }
 
     // constructor
     public Professor(short id, String name, float seniority, LocalDate hiringDate, Set<String> setOfDisciplines) {
@@ -24,10 +33,13 @@ public class Professor implements Comparable<Professor>
         this.seniority = seniority;
         this.hiringDate = hiringDate;
         this.setOfDisciplines = setOfDisciplines;
-        this.listOfAffectedCourses = null;
+        this.listOfAffectedCourses = new ArrayList<>();
     }
 
     // methods
+    public void addCourseToListOfAffectedCourses(Course course){
+        this.listOfAffectedCourses.add(course);
+    }
     @Override
     public int compareTo(Professor o) {
         if(this.seniority > ((Professor)o).seniority)
@@ -37,9 +49,8 @@ public class Professor implements Comparable<Professor>
         else
             return this.hiringDate.compareTo(((Professor)o).hiringDate);
     }
-
     @Override
     public String toString() {
-        return name + "(" + id + ")";
+        return "(id " + id + ") [seniority " + seniority + "] " + name;
     }
 }
