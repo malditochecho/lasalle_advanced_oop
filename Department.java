@@ -30,7 +30,4 @@ public class Department {
         this.courseMap = courseMap;
         this.listOfProfs = listOfProfs;
     }
-
-    // methods
-
 }

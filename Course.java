@@ -4,7 +4,7 @@ public class Course {
     // attributes
     private String id;
     private String title;
-    private String disciple;
+    private String discipline;
     private byte numberOfHours;
     private byte numOfGroups = 0;
 
@@ -12,8 +12,11 @@ public class Course {
     public String getId() {
         return id;
     }
-    public String getDisciple() {
-        return disciple;
+    public String getTitle() {
+        return title;
+    }
+    public String getDiscipline() {
+        return discipline;
     }
     public byte getNumOfGroups() {
         return numOfGroups;
@@ -25,17 +28,17 @@ public class Course {
     }
 
     // constructor
-    public Course(String id, String title, String disciple, byte numberOfHours, byte numOfGroups) {
+    public Course(String id, String title, String discipline, byte numberOfHours, byte numOfGroups) {
         this.id = id;
         this.title = title;
-        this.disciple = disciple;
+        this.discipline = discipline;
         this.numberOfHours = numberOfHours;
         this.numOfGroups = numOfGroups;
     }
     public Course(Course course) {
         id = course.id;
         title = course.title;
-        disciple = course.disciple;
+        discipline = course.discipline;
         numberOfHours = course.numberOfHours;
         numOfGroups = course.numOfGroups;
     }
@@ -58,7 +61,7 @@ public class Course {
     }
     @Override
     public String toString() {
-        return "Course [disciple=" + disciple + ", id=" + id + ", numOfGroups=" + numOfGroups + ", numberOfHours="
+        return "Course [discipline=" + discipline + ", id=" + id + ", numOfGroups=" + numOfGroups + ", numberOfHours="
                 + numberOfHours + ", title=" + title + "]";
     }
 }
